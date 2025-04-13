@@ -6,7 +6,7 @@ import sys
 
 HANDLERS = ["!", "/", ".", "?", "#", "$"]
 VERSION = config.system_version
-abuses = [
+ABUSES = [
     # Hindi
     "chutiya", "madarchod", "bhosdi", "bhenchod", "lund", "gaand", "randi", "chut", "gandu", "bhosdike",
     "chod", "jhant", "maa ka", "behen ka", "teri maa", "maa chuda", "bhen chudai", "loda", "chutmar", "gaandfat",
