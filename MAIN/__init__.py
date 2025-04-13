@@ -4,6 +4,9 @@ import logging
 import os 
 import sys
 
+HANDLERS = ["!", "/", ".", "?", "#", "$"]
+VERSION = config.system_version
+
 
 if not API_ID or API_HASH or TOKEN:
   print("❌ API_ID, HASH nad TOKEN must be in environment varaibles") 
