@@ -4,6 +4,14 @@ import logging
 import os 
 import sys
 
+logging.basicConfig(
+  format="[KuroAI-Beta] %(name)s - %(levelname)s - %(message)s",
+  handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
+  level=logging.INFO,
+)
+
+
+
 HANDLERS = ["!", "/", ".", "?", "#", "$"]
 VERSION = config.system_version
 ABUSES = [
@@ -23,7 +31,7 @@ ABUSES = [
     "chutiyapa", "chodu", "maa chod", "bhen ke", "gand", "chodna", "gaand mara",
 ]
 
-if not config.API_ID or config.API_HASH or config.TOKEN:
+if not config.API_ID or not config.API_HASH or not config.TOKEN:
   print("❌ API_ID, HASH nad TOKEN must be in environment varaibles") 
 
 
