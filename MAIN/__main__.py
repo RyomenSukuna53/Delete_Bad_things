@@ -2,6 +2,9 @@ from .__init__ import Officer
 from pyrogram import Client, filters 
 from COMMANDS import start, about, handle_abuses
 import config 
+import COMMANDS 
+
+
 
 if __name__=="__main__":
   Officer.run() 
