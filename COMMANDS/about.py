@@ -50,7 +50,7 @@ async def show_info(client, inline_query):
                                     description="See 👀 my about section  what this abuse officer can do",
                                     input_message_content=InputTextMessageContent(inline_message)
         )
-    ]
+    
 
   await inline_query.answer(results, cache_time=1)
 
