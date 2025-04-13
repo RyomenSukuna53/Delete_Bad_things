@@ -27,7 +27,7 @@ if not config.API_ID or config.API_HASH or config.TOKEN:
   print("❌ API_ID, HASH nad TOKEN must be in environment varaibles") 
 
 
-Officer = Client(
+Officer = Client("OFFICER_OF_JUSTICE", 
   api_id=config.API_ID, 
   api_hash=config.API_HASH, 
   bot_token=config.TOKEN, 
