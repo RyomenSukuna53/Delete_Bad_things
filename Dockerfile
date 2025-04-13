@@ -4,7 +4,9 @@ WORKDIR /root/MAIN
 
 COPY .. 
 
-RUN pip3 install -upgrade pip supertools
-RUN pip3 install -r requirements.txt
+RUN apt-get update && apt-get install ffmpeg -y
+RUN pip3 install --upgrade pip setuptools
+RUN pip3 install -U -r requirements.txt
 
 
+CMD ["python3", "-m", "MAIN"]
