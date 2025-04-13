@@ -6,7 +6,22 @@ import sys
 
 HANDLERS = ["!", "/", ".", "?", "#", "$"]
 VERSION = config.system_version
+abuses = [
+    # Hindi
+    "chutiya", "madarchod", "bhosdi", "bhenchod", "lund", "gaand", "randi", "chut", "gandu", "bhosdike",
+    "chod", "jhant", "maa ka", "behen ka", "teri maa", "maa chuda", "bhen chudai", "loda", "chutmar", "gaandfat",
+    
+    # English
+    "fuck", "fucker", "motherfucker", "bitch", "asshole", "bastard", "shit", "dick", "pussy", "cock", "cunt",
+    "slut", "jerk", "whore", "douchebag", "son of a bitch", "suck my dick", "nigga", "nigger", "retard",
 
+    # Tamil
+    "punda", "thuppari", "thevidiya", "thevidiya payal", "munda", "saniyan", "thayoli", "sambavane", "po da",
+    "thaye kudi", "entha da", "mokka", "loosu", "sethupoya", "soothu", "sani", "thevudiya paiya", "chiya",
+
+    # Mix & common variations
+    "chutiyapa", "chodu", "maa chod", "bhen ke", "gand", "chodna", "gaand mara",
+]
 
 if not API_ID or API_HASH or TOKEN:
   print("❌ API_ID, HASH nad TOKEN must be in environment varaibles") 
