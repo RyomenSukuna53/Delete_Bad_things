@@ -1,14 +1,14 @@
 import io
 from pyrogram import *
 from MAIN.__main__ import Officer as bot
-from MAIN import HANDLER
+from MAIN import HANDLERS
 from config import OWNER_ID
 from config import SUDO
 import traceback
 from subprocess import getoutput as run
 from pyrogram.enums import ChatAction
 
-@bot.on_message(filters.command(["logs", "log"], prefixes=HANDLER))
+@bot.on_message(filters.command(["logs", "log"], prefixes=HANDLERS))
 async def logs(_, message):
     if message.from_user.id == OWNER_ID or message.from_user.id in SUDO:
         print("")
