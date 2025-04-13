@@ -9,7 +9,7 @@ from collections import defaultdict
 abusive_limit = defaultdict(int)
 SUPPORT_CHAT = -1002403025137
 
-@Officer.on_message(filters.text & filters.group(SUPPORT_CHAT))
+@Officer.on_message(filters.text & filters.chat(SUPPORT_CHAT))
 async def delete_abusive_msgs(client, message: Message):
     user = message.from_user
     user_id = user.id
