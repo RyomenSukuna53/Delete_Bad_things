@@ -1,6 +1,6 @@
 from .__init__ import Officer 
 from pyrogram import Client, filters 
-from COMMANDS import * 
+from COMMANDS import start, about, handle_abuse
 import config 
 
 if __name__=="__main__":
