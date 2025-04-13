@@ -23,7 +23,7 @@ ABUSES = [
     "chutiyapa", "chodu", "maa chod", "bhen ke", "gand", "chodna", "gaand mara",
 ]
 
-if not API_ID or API_HASH or TOKEN:
+if not config.API_ID or config.API_HASH or config.TOKEN:
   print("❌ API_ID, HASH nad TOKEN must be in environment varaibles") 
 
 
