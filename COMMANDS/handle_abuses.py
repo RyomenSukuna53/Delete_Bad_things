@@ -7,7 +7,6 @@ from collections import defaultdict
 
 # Abuse tracking dictionary (global for session)
 abusive_limit = defaultdict(int)
-SUPPORT_CHAT = -1002403025137
 
 @Officer.on_message(filters.text)
 async def delete_abusive_msgs(client, message: Message):
