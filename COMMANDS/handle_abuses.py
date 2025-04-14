@@ -6,7 +6,7 @@ from collections import defaultdict
 
 abusive_limit = defaultdict(int)
 
-@Officer.on_message(filters.text & ~filters.command())
+@Officer.on_message(filters.text)
 async def delete_abusive_msgs(client, message: Message):
     user = message.from_user
     if not user:
