@@ -3,6 +3,7 @@ from pyrogram import Client, filters
 from COMMANDS import start, about, handle_abuses
 import config 
 import COMMANDS 
+from COMMANDS.__init__ import ALL_MODULES
 
 
 
