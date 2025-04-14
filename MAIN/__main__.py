@@ -1,14 +1,7 @@
 from .__init__ import Officer 
 from pyrogram import Client, filters 
-from COMMANDS import start, about, handle_abuses
-import config 
-import COMMANDS 
-from COMMANDS.__init__ import ALL_MODULES
-import importlib
+import COMMANDS
 
-
-for all_module in ALL_MODULES:
-    importlib.import_module("COMMANDS." + all_module)
 
 
 
