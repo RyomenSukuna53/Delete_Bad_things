@@ -1,4 +1,4 @@
-from MAIN.__init__ import Officer, HANDLERS, VERSION
+from MAIN import Officer, HANDLERS, VERSION
 from pyrogram import Client, filters 
 from pyrogram.enums import ParseMode 
 
