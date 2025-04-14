@@ -1,51 +1,47 @@
-from MAIN import Officer 
-from pyrogram import Client, filters 
-from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent 
-
-
+from MAIN import Officer
+from pyrogram import Client, filters
+from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent
 
 @Officer.on_inline_query()
 async def show_info(client, inline_query):
     query = inline_query.query.strip()
 
-    inline_message = """
-🚀 THIS BOT IS USUALLY MADE FOR GROUPS.
-IN WHICH MANY USERS ABUSE AND DO S*X CHATS WITH GIRLS AND OUR SISTERS ETC.
-WE WANT TO PREVENT THIS.
-
-PRESENTING YOU:-
-      OUR FIRST AND BEST ROBOT OF POSITIVE THOUGHTS.
-THIS BOT CAN DELETE ALL MSGS AND WARN USERS BAN THEM FROM GC TO PREVENT BAD CHATS.
-
-CRÉDIT 💳:-
-   [@RaijinCodes_Ultra] MEMBER OF  𝙲𝙾𝙳𝙴𝚂 𝙾𝙵 𝗟𝗘𝗚𝗘𝗡𝗗𝗦 | 伝説 ALSO KNOWN AS [𝙲𝙾𝙻-𝙓•忍者].
-   AND 
-   [@McQueen95] OWNER OF TG HEXA ULTIMATE AND GIVE THE IDEA TO CREATE THIS BOT.
-
-[✉️NOTICE]:- 
-IF YOU WANT TO CREATE YOUR OWN BOTS LIKE THIS ON YOUR THOUGHTS.
-JOIN:- @COLXproMainChannel and @COL_Xpro_main.
-AUTHORIZE YOU BY BOT @KuroAI_COLROBOT BY TAGGING OWNER @RaijinCodes_Ultra AND THEN SEND YOUR ORDER REQUEST TO CREATE IT. 
-
-___________________
-|𝐓𝐇𝐀𝐍𝐊 𝐘𝐎𝐔 ❤🌹🙏|
-———————————————————
-    """
-
-    if not query:
+    if query.lower() not in ["info", "about", "help"]:
         await inline_query.answer(
             [],
-            switch_pm_text="Type info to get info...",
+            switch_pm_text="Type 'info' to learn about the bot",
             switch_pm_parameter="start"
         )
         return
 
+    inline_message = """
+<b>🚀 THIS BOT IS USUALLY MADE FOR GROUPS.</b>
+In which many users abuse and do s*x chats with girls and our sisters, etc.
+We want to prevent this.
+
+<b>PRESENTING YOU:-</b>
+Our first and best robot of positive thoughts.
+This bot can delete all messages, warn users, and ban them from groups to prevent bad chats.
+
+<b>CRÉDIT 💳:</b>
+• <a href="https://t.me/RaijinCodes_Ultra">@RaijinCodes_Ultra</a> - Member of 𝙲𝙾𝙳𝙴𝚂 𝙾𝙵 𝗟𝗘𝗚𝗘𝗡𝗗𝗦 | 伝説 also known as COL-X•忍者.
+• <a href="https://t.me/McQueen95">@McQueen95</a> - Owner of TG Hexa Ultimate and idea contributor.
+
+<b>[✉️ NOTICE]:</b>
+If you want to create your own bots like this based on your thoughts,
+Join: <a href="https://t.me/COLXproMainChannel">@COLXproMainChannel</a> and <a href="https://t.me/COL_Xpro_main">@COL_Xpro_main</a>
+Authorize through @KuroAI_COLROBOT by tagging the owner @RaijinCodes_Ultra and then send your bot request.
+
+____________________
+<b>| THANK YOU ❤🌹🙏 |</b>
+———————————————
+"""
+
     result = InlineQueryResultArticle(
         title="👑 About",
-        description="See 👀 my about section  what this abuse officer can do",
-        input_message_content=InputTextMessageContent(inline_message)
+        description="See 👀 what this Abuse Officer bot can do",
+        input_message_content=InputTextMessageContent(inline_message, parse_mode="HTML")
     )
 
     await inline_query.answer([result], cache_time=1)
-
-
+    
