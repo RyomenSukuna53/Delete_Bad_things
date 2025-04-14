@@ -1,6 +1,8 @@
 from MAIN import Officer
 from pyrogram import Client, filters
 from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent
+from pyrogram.enums import ParseMode 
+
 
 @Officer.on_inline_query()
 async def show_info(client, inline_query):
@@ -40,7 +42,7 @@ ____________________
     result = InlineQueryResultArticle(
         title="👑 About",
         description="See 👀 what this Abuse Officer bot can do",
-        input_message_content=InputTextMessageContent(inline_message, parse_mode="HTML")
+        input_message_content=InputTextMessageContent(inline_message, parse_mode=ParseMode.HTML)
     )
 
     await inline_query.answer([result], cache_time=1)
