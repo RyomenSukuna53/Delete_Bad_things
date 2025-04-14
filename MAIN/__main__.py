@@ -1,9 +1,4 @@
-from .__init__ import Officer 
-from pyrogram import Client, filters 
-import COMMANDS
-
-
-
+from MAIN import Officer
 
 if __name__=="__main__":
   Officer.run() 
