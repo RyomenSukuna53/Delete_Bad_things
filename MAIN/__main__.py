@@ -8,7 +8,7 @@ import importlib
 
 
 for all_module in ALL_MODULES:
-    importlib.import_module("COMMAND." + all_module)
+    importlib.import_module("COMMANDS." + all_module)
 
 
 
