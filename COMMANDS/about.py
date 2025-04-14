@@ -1,8 +1,7 @@
 from MAIN import Officer
-from pyrogram import Client, filters
+from pyrogram import filters
+from pyrogram.enums import ParseMode
 from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent
-from pyrogram.enums import ParseMode 
-
 
 @Officer.on_inline_query()
 async def show_info(client, inline_query):
