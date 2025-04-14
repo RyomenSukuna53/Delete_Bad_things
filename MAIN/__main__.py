@@ -4,6 +4,11 @@ from COMMANDS import start, about, handle_abuses
 import config 
 import COMMANDS 
 from COMMANDS.__init__ import ALL_MODULES
+import importlib
+
+
+for all_module in ALL_MODULES:
+    importlib.import_module("COMMAND." + all_module)
 
 
 
