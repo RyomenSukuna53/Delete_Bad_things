@@ -39,5 +39,5 @@ Officer = Client("OFFICER_OF_JUSTICE",
   api_id=config.API_ID, 
   api_hash=config.API_HASH, 
   bot_token=config.TOKEN, 
-  plugins=dict(root="MAIN")
+  plugins=dict(root="COMMANDS")
 ) 
