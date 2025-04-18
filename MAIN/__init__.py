@@ -18,7 +18,7 @@ ABUSES = [
     # Hindi
     "chutiya", "madarchod", "bhosdi", "bhenchod", "lund", "gaand", "randi", "chut", "gandu", "bhosdike",
     "chod", "jhant", "maa ka", "behen ka", "teri maa", "maa chuda", "bhen chudai", "loda", "chutmar", "gaandfat",
-    "Chut", "Bsdk", "Chamar", "Beti", "Lund", "Gawar", "Bc", "Mc", "Tmkc", "Lode, "Lund", "Bkl", "Chutiyapa", "Chutiya", 
+    "Chut", "Bsdk", "Chamar", "Beti", "Lund", "Gawar", "Bc", "Mc", "Tmkc", "Lode", "Lund", "Bkl", "Chutiyapa", "Chutiya", 
   
     # English
     "fuck", "fucker", "motherfucker", "bitch", "asshole", "bastard", "shit", "dick", "pussy", "cock", "cunt",
